@@ -1,8 +1,10 @@
 import { Section } from "components/Section/Section";
+import { HomeSection } from "../components/HomeSection/HomeSection";
 
 function Home() {
   return (
-    <Section className="carsHomeSection" titleClassName="titleHome">
+    <Section className="homeSection" titleClassName="titleHome">
+      <HomeSection />
     </Section>
   );
   }
