@@ -4,7 +4,7 @@ import { IoMdHeart } from "react-icons/io";
 import { LiWrapper } from "./CardMarkupItem.styled";
 import { useEffect, useState } from "react";
 import { Modal } from "components/Modal/Modal";
-import { CardModalList } from 'components/CardModalList/CardModalList';
+import { CardModalList } from 'components/CardModalList';
 import { useDispatch, useSelector } from "react-redux";
 import { selectFavorites } from "../../redux/favorites/selects";
 import { addFavorite, removeFavorite } from "../../redux/favorites/reducer";
@@ -29,7 +29,6 @@ export const CardMarkupItem = ({ cardData }) => {
   const dispatch = useDispatch();
   const isLogged = useSelector(selectUserIsSignIn);
   const favorites = useSelector(selectFavorites);
-  // const selectedLevel = useSelector(selectFilteredLevel);
   const [isFavorite, setIsFavorite] = useState(false);
   const [defaultAvatar, setDefaultAvatar] = useState(null);
   const [defaultAvatarReviews, setDefaultAvatarReviews] = useState([]);
