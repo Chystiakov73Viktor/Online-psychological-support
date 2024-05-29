@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Wrapper } from "./HomeSection.styled";
 import { MdArrowOutward } from "react-icons/md";
 import psychologist from "../../images/psychologist.jpg";
@@ -6,6 +7,13 @@ import { MdOutlineQuestionMark } from "react-icons/md";
 import { MdOutlinePeopleOutline } from "react-icons/md";
 
 export const HomeSection = () => {
+  const navigate = useNavigate();
+
+  const handleGetStartedClick = () => {
+    const destination = "/psychologists";
+    navigate(destination);
+  };
+
   return (
     <Wrapper>
       <div className="containerText">
@@ -17,7 +25,11 @@ export const HomeSection = () => {
           We help you to reveal your potential, overcome challenges and find a
           guide in your own life with the help of our experienced psychologists.
         </p>
-        <button className="heroButton" type="button">
+        <button
+          className="heroButton"
+          type="button"
+          onClick={handleGetStartedClick}
+        >
           Get started
           <MdArrowOutward
             style={{
@@ -61,7 +73,7 @@ export const HomeSection = () => {
           />
         </div>
         <div className="containerPeople">
-          <MdOutlinePeopleOutline 
+          <MdOutlinePeopleOutline
             style={{
               fill: "#fbfbfb",
             }}
