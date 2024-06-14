@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Wrapper } from "./HomeSection.styled";
 import { MdArrowOutward } from "react-icons/md";
 import psychologist from "../../images/psychologist.jpg";
@@ -7,13 +7,6 @@ import { MdOutlineQuestionMark } from "react-icons/md";
 import { MdOutlinePeopleOutline } from "react-icons/md";
 
 export const HomeSection = () => {
-  const navigate = useNavigate();
-
-  const handleGetStartedClick = () => {
-    const destination = "/psychologists";
-    navigate(destination);
-  };
-
   return (
     <Wrapper>
       <div className="containerText">
@@ -25,10 +18,10 @@ export const HomeSection = () => {
           We help you to reveal your potential, overcome challenges and find a
           guide in your own life with the help of our experienced psychologists.
         </p>
-        <button
+        <Link
+          to="/psychologists"
           className="heroButton"
-          type="button"
-          onClick={handleGetStartedClick}
+          style={{ textDecoration: "none" }}
         >
           Get started
           <MdArrowOutward
@@ -42,7 +35,7 @@ export const HomeSection = () => {
               border: "none",
             }}
           />
-        </button>
+        </Link>
       </div>
       <div className="containerImg">
         <img
