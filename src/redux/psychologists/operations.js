@@ -1,7 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchAddPsychologists, fetchDeletePsychologist, fetchGetPsychologists } from '../../services/db';
+import {
+  fetchAddPsychologists,
+  fetchDeletePsychologist,
+  fetchGetPsychologists,
+} from '../../services/db';
 import psychologists from '../../services/psychologists.json';
-
 
 export const getPsychologists = createAsyncThunk(
   'psychologists/fetchAll',

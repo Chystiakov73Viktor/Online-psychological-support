@@ -32,7 +32,7 @@ export const Backdrop = styled.div`
   &.backdropNavigationMobile {
     background-color: #fff;
     @media ${device.tablet} {
-    display: none;
-  }
+      display: none;
+    }
   }
 `;

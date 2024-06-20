@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { FiEye, FiEyeOff } from "react-icons/fi";
-import { WrapperDiv } from "./PasswordInput.styled";
+import { useState } from 'react';
+import { FiEye, FiEyeOff } from 'react-icons/fi';
+import { WrapperDiv } from './PasswordInput.styled';
 
 export const PasswordInput = ({ name, value, onChange, onBlur, className }) => {
   const [visible, setVisible] = useState(false);
@@ -12,7 +12,7 @@ export const PasswordInput = ({ name, value, onChange, onBlur, className }) => {
   return (
     <WrapperDiv>
       <input
-        type={visible ? "text" : "password"}
+        type={visible ? 'text' : 'password'}
         placeholder="Password"
         name={name}
         value={value}
@@ -22,9 +22,9 @@ export const PasswordInput = ({ name, value, onChange, onBlur, className }) => {
       />
       <div className="iconWrapper" onClick={toggleVisibility}>
         {visible ? (
-          <FiEye style={{ color: "#121417" }} />
+          <FiEye style={{ color: '#121417' }} />
         ) : (
-          <FiEyeOff style={{ color: "#121417" }} />
+          <FiEyeOff style={{ color: '#121417' }} />
         )}
       </div>
     </WrapperDiv>

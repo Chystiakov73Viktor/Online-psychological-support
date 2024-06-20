@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { device } from "../device";
+import styled from 'styled-components';
+import { device } from '../device';
 
 export const LiWrapper = styled.li`
   position: relative;
@@ -30,7 +30,7 @@ export const LiWrapper = styled.li`
     align-items: center;
     align-self: flex-start;
     border: 3px solid #fbe9ba;
-    border-radius: 100px;
+    border-radius: 30px;
     width: 120px;
     height: 120px;
   }
@@ -104,7 +104,7 @@ export const LiWrapper = styled.li`
   }
 
   .itemInfo:not(:first-child):not(:last-child)::after {
-    content: "|";
+    content: '|';
     width: 1px;
     color: rgba(18, 20, 23, 0.2);
     margin-left: 16px;
@@ -143,7 +143,7 @@ export const LiWrapper = styled.li`
     border: transparent;
     padding: 8px 16px;
     background-color: #f3f3f3;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -155,7 +155,7 @@ export const LiWrapper = styled.li`
   }
 
   .buttonReadMore {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -205,7 +205,7 @@ export const LiWrapper = styled.li`
     padding: 14px 32px;
     background-color: #3470ff;
     border: transparent;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;

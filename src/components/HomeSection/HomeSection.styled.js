@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   @media screen and (min-width: 768px) {
@@ -19,12 +19,14 @@ export const Wrapper = styled.div`
     width: 100%;
     max-width: 595px;
     margin: auto;
+    margin-bottom: 20px;
   }
 
   @media screen and (min-width: 1440px) {
     .containerText {
       margin: 0;
       margin-right: 20px;
+      margin-bottom: 0;
     }
   }
 
@@ -34,6 +36,16 @@ export const Wrapper = styled.div`
     position: relative;
     height: auto;
     margin: auto;
+  }
+
+  .psychologistImg {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .psychologistImg {
+      margin-bottom: 0;
+    }
   }
 
   @media screen and (min-width: 1440px) {
@@ -67,10 +79,12 @@ export const Wrapper = styled.div`
   }
 
   .heroButton {
+    display: block;
+    width: 240px;
     border: transparent;
     border-radius: 30px;
     padding: 18px 50px;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;

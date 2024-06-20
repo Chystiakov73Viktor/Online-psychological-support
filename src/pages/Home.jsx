@@ -1,5 +1,5 @@
-import { Section } from "components/Section/Section";
-import { HomeSection } from "../components/HomeSection/HomeSection";
+import { Section } from 'components/Section/Section';
+import { HomeSection } from '../components/HomeSection/HomeSection';
 
 function Home() {
   return (
@@ -7,6 +7,6 @@ function Home() {
       <HomeSection />
     </Section>
   );
-  }
-  
-  export default Home;
+}
+
+export default Home;

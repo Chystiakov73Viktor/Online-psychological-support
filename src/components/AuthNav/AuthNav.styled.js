@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const DivWrapper = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const DivWrapper = styled.div`
     border-radius: 30px;
     padding: 14px 39px;
     cursor: pointer;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;
@@ -24,7 +24,7 @@ export const DivWrapper = styled.div`
     background: #3470ff;
     border: transparent;
     cursor: pointer;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;

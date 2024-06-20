@@ -1,14 +1,17 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Section } from "components/Section/Section";
-import { Loader } from "components/Loader/Loader";
-import Pagination from "components/Pagination/Pagination";
-import { CardMarkupList } from "components/CardMarkupList/CardMarkupList";
-import { selectPsychologistData, selectPsychologistIsLoading } from "../redux/psychologists/selects";
-import { getPsychologists } from "../redux/psychologists/operations";
-import { Filter } from "../components/Filter/Filter";
-import { filterPsychologists } from "../redux/filter/operations";
-import { selectFilteredPsychologistData } from "../redux/filter/selects";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Section } from 'components/Section/Section';
+import { Loader } from 'components/Loader/Loader';
+import Pagination from 'components/Pagination/Pagination';
+import { CardMarkupList } from 'components/CardMarkupList/CardMarkupList';
+import {
+  selectPsychologistData,
+  selectPsychologistIsLoading,
+} from '../redux/psychologists/selects';
+import { getPsychologists } from '../redux/psychologists/operations';
+import { Filter } from '../components/Filter/Filter';
+import { filterPsychologists } from '../redux/filter/operations';
+import { selectFilteredPsychologistData } from '../redux/filter/selects';
 
 function Psychologists() {
   const dispatch = useDispatch();
@@ -26,16 +29,19 @@ function Psychologists() {
     dispatch(filterPsychologists({ filter: '', type: 'psychologists' }));
   }, [data, dispatch]);
 
-  const handleFilterChange = (filter) => {
+  const handleFilterChange = filter => {
     dispatch(filterPsychologists({ filter, type: 'psychologists' }));
   };
 
-  const renderCardList = (paginatedData) => {
+  const renderCardList = paginatedData => {
     return <CardMarkupList dataCard={paginatedData} />;
   };
 
   return (
-    <Section className="psychologistsSection" titleClassName="titlePsychologists">
+    <Section
+      className="psychologistsSection"
+      titleClassName="titlePsychologists"
+    >
       {isLoading ? (
         <Loader />
       ) : (

@@ -1,5 +1,10 @@
-import styled from "styled-components";
-import { device } from "../device";
+import styled from 'styled-components';
+import MenuIcon from '@mui/icons-material/Menu';
+import { device } from '../device';
+
+export const StyledMenuIcon = styled(MenuIcon)`
+  color: black;
+`;
 
 export const DivWrapper = styled.div`
   display: flex;

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { device } from "../device";
+import styled from 'styled-components';
+import { device } from '../device';
 
 export const NavWrapper = styled.nav`
   display: none;
@@ -9,7 +9,7 @@ export const NavWrapper = styled.nav`
     align-items: center;
     gap: 20px;
   }
-  
+
   @media ${device.desktop} {
     gap: 40px;
   }
@@ -23,7 +23,7 @@ export const NavWrapper = styled.nav`
     line-height: 24px;
   }
   .active::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -43,9 +43,9 @@ export const NavMobileWrapper = styled.nav`
   flex-direction: column;
   gap: 20px;
 
-  @media ${device.tablet} {
+  /* @media ${device.tablet} {
     display: none;
-  }
+  } */
 
   .navigation-link {
     color: #333;

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Swiper } from "swiper/react";
+import styled from 'styled-components';
+import { Swiper } from 'swiper/react';
 
 export const Container = styled.div`
   position: absolute;
@@ -22,7 +22,7 @@ export const FixedHeader = styled.div`
   top: 0;
   margin-bottom: 8px;
   background-color: #fff;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -34,19 +34,18 @@ export const Option = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
   min-width: 0;
   padding: 8px;
   cursor: pointer;
-  margin-right: 12px; 
-  color: ${(props) => (props.selected ? "#191a15" : " rgba(25, 26, 21, 0.3)")};
+  margin-right: 12px;
+  color: ${props => (props.selected ? '#191a15' : ' rgba(25, 26, 21, 0.3)')};
 
   &:hover {
-    color: ${(props) =>
-      props.selected ? "#191a15" : " rgba(25, 26, 21, 0.3)"};
+    color: ${props => (props.selected ? '#191a15' : ' rgba(25, 26, 21, 0.3)')};
   }
 `;
 

@@ -1,30 +1,30 @@
-import { useDispatch } from "react-redux";
-import { signupThunk } from "../../redux/users/operations.js";
-import { Notify } from "notiflix";
-import { SignupPageWrapper } from "./Signup.styled.js";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { IoCloseOutline } from "react-icons/io5";
-import { PasswordInput } from "components/PasswordInput/PasswordInput.jsx";
+import { useDispatch } from 'react-redux';
+import { signupThunk } from '../../redux/users/operations.js';
+import { Notify } from 'notiflix';
+import { SignupPageWrapper } from './Signup.styled.js';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { IoCloseOutline } from 'react-icons/io5';
+import { PasswordInput } from 'components/PasswordInput/PasswordInput.jsx';
 
 const Signup = ({ onClose }) => {
   const dispatch = useDispatch();
 
   const validationSchema = Yup.object().shape({
-    userName: Yup.string().required("Name is required"),
+    userName: Yup.string().required('Name is required'),
     userEmail: Yup.string()
-      .email("Invalid email")
-      .required("Email is required"),
+      .email('Invalid email')
+      .required('Email is required'),
     userPassword: Yup.string()
-      .min(6, "Password must be at least 6 characters")
-      .required("Password is required"),
+      .min(6, 'Password must be at least 6 characters')
+      .required('Password is required'),
   });
 
   const formik = useFormik({
     initialValues: {
-      userName: "",
-      userEmail: "",
-      userPassword: "",
+      userName: '',
+      userEmail: '',
+      userPassword: '',
     },
     validationSchema: validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
@@ -39,12 +39,12 @@ const Signup = ({ onClose }) => {
 
         if (error) {
           Notify.failure(payload);
-          console.error("Signup error:", payload);
+          console.error('Signup error:', payload);
         } else {
           resetForm();
         }
       } catch (error) {
-        console.error("Unexpected error:", error);
+        console.error('Unexpected error:', error);
       } finally {
         setSubmitting(false);
       }
@@ -115,7 +115,7 @@ const Signup = ({ onClose }) => {
           </label>
         </div>
         <button type="submit" className="buttonSignup" disabled={isSubmitting}>
-          {isSubmitting ? "Signing up..." : "Sign Up"}
+          {isSubmitting ? 'Signing up...' : 'Sign Up'}
         </button>
       </form>
     </SignupPageWrapper>

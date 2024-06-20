@@ -21,7 +21,7 @@ const userSlice = createSlice({
   name: 'users',
   initialState,
   reducers: {},
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder
       .addCase(signupThunk.fulfilled, (state, { payload }) => {
         state.userEmail = payload.email;
@@ -37,7 +37,7 @@ const userSlice = createSlice({
         state.userToken = payload.token;
         state.isSignin = true;
       })
-      .addCase(signoutThunk.fulfilled, (state) => {
+      .addCase(signoutThunk.fulfilled, state => {
         state.userEmail = null;
         state.userName = null;
         state.avatarURL = null;
@@ -52,10 +52,10 @@ const userSlice = createSlice({
         state.isSignin = true;
         state.isRefreshing = false;
       })
-      .addCase(refreshThunk.pending, (state) => {
+      .addCase(refreshThunk.pending, state => {
         state.isRefreshing = true;
       })
-      .addCase(refreshThunk.rejected, (state) => {
+      .addCase(refreshThunk.rejected, state => {
         state.isRefreshing = false;
       })
       .addCase(updateProfileThunk.fulfilled, (state, { payload }) => {
@@ -67,11 +67,11 @@ const userSlice = createSlice({
       .addMatcher(isAnyOf(...getRequests('rejected')), handleRejected);
   },
 });
-const handleFulfilled = (state) => {
+const handleFulfilled = state => {
   state.isLoading = false;
   state.error = '';
 };
-const handlePending = (state) => {
+const handlePending = state => {
   state.isLoading = true;
   state.error = '';
 };
@@ -88,6 +88,6 @@ const arrayRequests = [
   updateProfileThunk,
 ];
 
-const getRequests = (type) => arrayRequests.map((action) => action[type]);
+const getRequests = type => arrayRequests.map(action => action[type]);
 
 export const userReducer = userSlice.reducer;

@@ -15,6 +15,9 @@ export const DivWrapper = styled.div`
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
+  }
+
+  @media screen and (max-width: 768px) {
     margin-right: 24px;
   }
 `;

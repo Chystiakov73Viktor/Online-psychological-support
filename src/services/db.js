@@ -22,17 +22,17 @@ export const fetchGetPsychologists = async () => {
   }
 };
 
- export const fetchAddPsychologists = async (psychologists) => {
+export const fetchAddPsychologists = async psychologists => {
   try {
     const psychologistsRef = ref(database, 'psychologists');
 
     psychologists.forEach(psychologist => {
       const newPsychologistRef = push(psychologistsRef);
-      
+
       const newPsychologistKey = newPsychologistRef.key;
-      
+
       psychologist.id = newPsychologistKey;
-      
+
       set(newPsychologistRef, psychologist);
     });
 

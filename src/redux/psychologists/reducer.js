@@ -1,5 +1,9 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import { getPsychologists, addPsychologists, deletePsychologist } from './operations';
+import {
+  getPsychologists,
+  addPsychologists,
+  deletePsychologist,
+} from './operations';
 
 const psychologistsSlice = createSlice({
   name: 'psychologists',
@@ -18,7 +22,9 @@ const psychologistsSlice = createSlice({
         state.psychologists.push(action.payload);
       })
       .addCase(deletePsychologist.fulfilled, (state, action) => {
-        state.psychologists = state.psychologists.filter(psychologist =>psychologist.id !== action.payload.id);
+        state.psychologists = state.psychologists.filter(
+          psychologist => psychologist.id !== action.payload.id
+        );
       })
       .addMatcher(isAnyOf(...getRequests('fulfilled')), handleFulfilled)
       .addMatcher(isAnyOf(...getRequests('pending')), handlePending)

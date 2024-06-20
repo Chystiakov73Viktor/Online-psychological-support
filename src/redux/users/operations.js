@@ -53,7 +53,7 @@ export const signinThunk = createAsyncThunk(
         credentials.password
       );
       const user = userCredential.user;
- 
+
       const token = await getIdToken(user);
 
       return {

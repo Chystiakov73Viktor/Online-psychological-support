@@ -1,6 +1,6 @@
-import { Container } from "components/Container/Container";
+import { Container } from 'components/Container/Container';
 
-import { SectionWrapper } from "./Section.styled";
+import { SectionWrapper } from './Section.styled';
 
 export const Section = ({ className, titleText, titleClassName, children }) => {
   return (

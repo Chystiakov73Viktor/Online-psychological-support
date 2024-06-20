@@ -1,13 +1,12 @@
-import { NavLink } from "react-router-dom";
-import { WrapperDiv } from "./Logo.styled";
+import { WrapperDiv } from './Logo.styled';
 
 export const Logo = () => {
   return (
     <WrapperDiv>
-      <NavLink className="titleLogo" to="/">
+      <p className="titleLogo">
         psychologists<span className="point">.</span>
         <span className="services">services</span>
-      </NavLink>
+      </p>
     </WrapperDiv>
   );
 };

@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { WrapperDiv } from "./CustomInput.styled";
-import { MdOutlineAccessTime } from "react-icons/md";
-import TimePicker from "../TimePicker/TimePicker";
+import { useState } from 'react';
+import { WrapperDiv } from './CustomInput.styled';
+import { MdOutlineAccessTime } from 'react-icons/md';
+import TimePicker from '../TimePicker/TimePicker';
 
 const CustomInput = ({ formik }) => {
   const [isTimeSelectOpen, setTimeSelectOpen] = useState(false);
@@ -11,9 +11,9 @@ const CustomInput = ({ formik }) => {
     setTimeSelectOpen(!isTimeSelectOpen);
   };
 
-  const handleTimeSelect = (time) => {
-    formik.setFieldValue('time', time); 
-    setTimeSelectOpen(false); 
+  const handleTimeSelect = time => {
+    formik.setFieldValue('time', time);
+    setTimeSelectOpen(false);
   };
 
   return (

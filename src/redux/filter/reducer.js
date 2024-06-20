@@ -1,10 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { filterPsychologists } from "./operations";
+import { createSlice } from '@reduxjs/toolkit';
+import { filterPsychologists } from './operations';
 
 const filterSlice = createSlice({
-  name: "filter",
+  name: 'filter',
   initialState: {
-    filter: "",
+    filter: '',
     filteredPsychologists: [],
     filteredFavorites: [],
   },
@@ -13,7 +13,7 @@ const filterSlice = createSlice({
       state.filter = action.payload;
     },
   },
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder.addCase(filterPsychologists.fulfilled, (state, action) => {
       const { filteredData, type } = action.payload;
       if (type === 'favorites') {

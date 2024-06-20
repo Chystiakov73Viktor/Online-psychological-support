@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const WrapperDiv = styled.div`
   display: flex;
@@ -32,7 +32,7 @@ export const WrapperDiv = styled.div`
     padding: 16px 18px 16px 18px;
     width: 100%;
     height: 52px;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.25;
@@ -90,7 +90,7 @@ export const WrapperDiv = styled.div`
     border: 1px solid rgba(25, 26, 21, 0.1);
     background-color: inherit;
     border-radius: 12px;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.25;
@@ -98,7 +98,7 @@ export const WrapperDiv = styled.div`
     outline: none;
     resize: none;
     &::placeholder {
-      font-family: "Inter", sans-serif;
+      font-family: 'Inter', sans-serif;
       font-weight: 400;
       font-size: 16px;
       line-height: 1.25;

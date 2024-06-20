@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
-import { Wrapper } from "./HomeSection.styled";
-import { MdArrowOutward } from "react-icons/md";
-import psychologist from "../../images/psychologist.jpg";
-import { FaCheck } from "react-icons/fa";
-import { MdOutlineQuestionMark } from "react-icons/md";
-import { MdOutlinePeopleOutline } from "react-icons/md";
+import { Link } from 'react-router-dom';
+import { Wrapper } from './HomeSection.styled';
+import { MdArrowOutward } from 'react-icons/md';
+import psychologist from '../../images/psychologist.jpg';
+import { FaCheck } from 'react-icons/fa';
+import { MdOutlineQuestionMark } from 'react-icons/md';
+import { MdOutlinePeopleOutline } from 'react-icons/md';
 
 export const HomeSection = () => {
   return (
@@ -21,18 +21,18 @@ export const HomeSection = () => {
         <Link
           to="/psychologists"
           className="heroButton"
-          style={{ textDecoration: "none" }}
+          style={{ textDecoration: 'none' }}
         >
           Get started
           <MdArrowOutward
             style={{
-              strokeWidth: "2px",
-              stroke: "transparent",
-              width: "15px",
-              height: "17px",
-              verticalAlign: "middle",
-              marginLeft: "18px",
-              border: "none",
+              strokeWidth: '2px',
+              stroke: 'transparent',
+              width: '15px',
+              height: '17px',
+              verticalAlign: 'middle',
+              marginLeft: '18px',
+              border: 'none',
             }}
           />
         </Link>
@@ -47,9 +47,9 @@ export const HomeSection = () => {
           <div className="containerFaCheck">
             <FaCheck
               style={{
-                width: "20px",
-                height: "16px",
-                fill: "#3470ff",
+                width: '20px',
+                height: '16px',
+                fill: '#3470ff',
               }}
             />
           </div>
@@ -61,14 +61,14 @@ export const HomeSection = () => {
         <div className="containerQuestionMark">
           <MdOutlineQuestionMark
             style={{
-              fill: "#fbfbfb",
+              fill: '#fbfbfb',
             }}
           />
         </div>
         <div className="containerPeople">
           <MdOutlinePeopleOutline
             style={{
-              fill: "#fbfbfb",
+              fill: '#fbfbfb',
             }}
           />
         </div>

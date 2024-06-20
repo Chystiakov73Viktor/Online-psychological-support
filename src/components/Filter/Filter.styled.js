@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 // import { device } from '../device';
 
 export const FormWrapper = styled.form`
-margin-bottom: 32px;
+  margin-bottom: 32px;
 
   .labelText {
     display: block;
@@ -19,23 +19,23 @@ margin-bottom: 32px;
 `;
 
 export const CustomStyles = {
-  control: (provided) => ({
+  control: provided => ({
     ...provided,
-    padding: "16px",
-    cursor: "pointer",
-    fontFamily: ["Roboto", "sans-serif"],
+    padding: '16px',
+    cursor: 'pointer',
+    fontFamily: ['Roboto', 'sans-serif'],
     fontWeight: 500,
-    fontSize: "18px",
+    fontSize: '18px',
     lineHeight: 1.11111,
-    color: "#fbfbfb",
-    boxShadow: "none",
-    border: "1px solid rgba(18, 20, 23, 0.05)",
-    borderRadius: "14px",
-    backgroundColor: "#3470ff",
-    outline: "none",
-    borderColor: "transparent",
-    "&:hover": {
-      borderColor: "rgba(18, 20, 23, 0.05)",
+    color: '#fbfbfb',
+    boxShadow: 'none',
+    border: '1px solid rgba(18, 20, 23, 0.05)',
+    borderRadius: '14px',
+    backgroundColor: '#3470ff',
+    outline: 'none',
+    borderColor: 'transparent',
+    '&:hover': {
+      borderColor: 'rgba(18, 20, 23, 0.05)',
     },
     // height: 'auto',
     // [`@media ${device.tablet}`]: {
@@ -44,54 +44,54 @@ export const CustomStyles = {
     //   lineHeight: '1.56',
     // },
   }),
-  singleValue: (provided) => ({
+  singleValue: provided => ({
     ...provided,
-    backgroundColor: "#3470ff",
-    color: "#fbfbfb",
+    backgroundColor: '#3470ff',
+    color: '#fbfbfb',
   }),
-  valueContainer: (provided) => ({
+  valueContainer: provided => ({
     ...provided,
-    padding: "0",
+    padding: '0',
   }),
-  placeholder: (provided) => ({
+  placeholder: provided => ({
     ...provided,
     padding: 0,
-    width: "100%",
-    backgroundColor: "#f7f7fb",
-    fontFamily: ["Inter", "sans-serif"],
+    width: '100%',
+    backgroundColor: '#f7f7fb',
+    fontFamily: ['Inter', 'sans-serif'],
     fontWeight: 500,
-    fontSize: "18px",
-    lineHeight: "1.11111",
-    color: "#fbfbfb",
+    fontSize: '18px',
+    lineHeight: '1.11111',
+    color: '#fbfbfb',
   }),
-  menu: (provided) => ({
+  menu: provided => ({
     ...provided,
-    width: "100%",
-    fontFamily: ["Inter", "sans-serif"],
+    width: '100%',
+    fontFamily: ['Inter', 'sans-serif'],
     fontWeight: 400,
-    fontSize: "16px",
+    fontSize: '16px',
     lineHeight: 1.25,
-    color: "rgba(25, 26, 21, 0.3);",
-    border: "1px solid rgba(18, 20, 23, 0.05)",
-    borderRadius: "14px",
-    backgroundColor: "#f7f7fb",
+    color: 'rgba(25, 26, 21, 0.3);',
+    border: '1px solid rgba(18, 20, 23, 0.05)',
+    borderRadius: '14px',
+    backgroundColor: '#f7f7fb',
   }),
-  dropdownIndicator: (provided) => ({
+  dropdownIndicator: provided => ({
     ...provided,
     padding: 0,
-    color: "#fbfbfb",
+    color: '#fbfbfb',
   }),
-  clearIndicator: (provided) => ({
+  clearIndicator: provided => ({
     ...provided,
     padding: 0,
-    color: "#fbfbfb",
+    color: '#fbfbfb',
   }),
-  indicatorSeparator: (provided) => ({
+  indicatorSeparator: provided => ({
     ...provided,
-    display: "none",
+    display: 'none',
   }),
-  Input2: (provided) => ({
+  Input2: provided => ({
     ...provided,
-    color: "#fbfbfb",
+    color: '#fbfbfb',
   }),
 };

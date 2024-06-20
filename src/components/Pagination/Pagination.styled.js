@@ -13,7 +13,7 @@ export const WrapperDiv = styled.div`
     border-radius: 12px;
     background-color: #3470ff;
     border: transparent;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;

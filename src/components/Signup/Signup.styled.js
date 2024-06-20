@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SignupPageWrapper = styled.div`
   position: relative;
@@ -61,7 +61,7 @@ export const SignupPageWrapper = styled.div`
     width: 100%;
     background-color: #3470ff;
     border: transparent;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;

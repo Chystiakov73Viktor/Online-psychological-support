@@ -1,7 +1,7 @@
-import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { NavMobileWrapper, NavWrapper } from "./Navigation.styled";
-import { selectUserIsSignIn } from "../../redux/users/selects";
+import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { NavMobileWrapper, NavWrapper } from './Navigation.styled';
+import { selectUserIsSignIn } from '../../redux/users/selects';
 
 export const Navigation = () => {
   const isLoading = useSelector(selectUserIsSignIn);

@@ -28,7 +28,7 @@ function Favorites() {
     return <CardMarkupList dataCard={paginatedData} />;
   };
 
-  const handleFilterChange = (filter) => {
+  const handleFilterChange = filter => {
     dispatch(filterPsychologists({ filter, type: 'favorites' }));
   };
 
@@ -38,7 +38,8 @@ function Favorites() {
         <Loader />
       ) : (
         <>
-          {Array.isArray(filteredFavoritesData) && filteredFavoritesData.length !== 0 ? (
+          {Array.isArray(filteredFavoritesData) &&
+          filteredFavoritesData.length !== 0 ? (
             <>
               <Filter onFilterChange={handleFilterChange} />
               <Pagination

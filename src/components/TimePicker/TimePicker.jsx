@@ -1,18 +1,18 @@
-import { useState } from "react";
-import { SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-import { Mousewheel, Pagination } from "swiper/modules";
+import { useState } from 'react';
+import { SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import { Mousewheel, Pagination } from 'swiper/modules';
 import {
   Container,
   FixedHeader,
   Option,
   StyledSwiper,
-} from "./TimePicker.styled";
+} from './TimePicker.styled';
 
 const TimePicker = ({ onSelect }) => {
-  const [selectedTime, setSelectedTime] = useState("");
+  const [selectedTime, setSelectedTime] = useState('');
 
-  const handleTimeSelect = (time) => {
+  const handleTimeSelect = time => {
     setSelectedTime(time);
     onSelect(time);
   };
@@ -24,8 +24,8 @@ const TimePicker = ({ onSelect }) => {
 
     for (let hour = startTime; hour <= endTime; hour++) {
       for (let minute = 0; minute < 60; minute += 30) {
-        const formattedHour = hour.toString().padStart(2, "0");
-        const formattedMinute = minute.toString().padStart(2, "0");
+        const formattedHour = hour.toString().padStart(2, '0');
+        const formattedMinute = minute.toString().padStart(2, '0');
         const time = `${formattedHour}:${formattedMinute}`;
         const isSelected = selectedTime === time;
 
@@ -51,7 +51,7 @@ const TimePicker = ({ onSelect }) => {
         <span className="time">Meeting time</span>
       </FixedHeader>
       <StyledSwiper
-        direction={"vertical"}
+        direction={'vertical'}
         slidesPerView={4}
         spaceBetween={0}
         mousewheel={true}

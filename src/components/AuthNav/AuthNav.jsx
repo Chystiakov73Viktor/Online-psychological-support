@@ -26,10 +26,7 @@ const AuthNav = () => {
 
   return (
     <DivWrapper>
-      <button
-        className="buttonLogin"
-        onClick={() => openModal('signin')}
-      >
+      <button className="buttonLogin" onClick={() => openModal('signin')}>
         Log in
       </button>
       <button

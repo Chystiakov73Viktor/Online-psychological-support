@@ -22,7 +22,7 @@ const Pagination = ({ data, itemsPerPage, renderCardList }) => {
     <WrapperDiv>
       {renderCardList(paginatedData)}
       {totalPages > 1 && (
-        <div className='containerButton'>
+        <div className="containerButton">
           <button
             className="button"
             type="button"

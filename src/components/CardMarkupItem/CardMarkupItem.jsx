@@ -1,16 +1,16 @@
-import { Notify } from "notiflix";
-import { IoMdHeartEmpty } from "react-icons/io";
-import { IoMdHeart } from "react-icons/io";
-import { LiWrapper } from "./CardMarkupItem.styled";
-import { useEffect, useState } from "react";
-import { Modal } from "components/Modal/Modal";
+import { Notify } from 'notiflix';
+import { IoMdHeartEmpty } from 'react-icons/io';
+import { IoMdHeart } from 'react-icons/io';
+import { LiWrapper } from './CardMarkupItem.styled';
+import { useEffect, useState } from 'react';
+import { Modal } from 'components/Modal/Modal';
 import { CardModalList } from 'components/CardModalList';
-import { useDispatch, useSelector } from "react-redux";
-import { selectFavorites } from "../../redux/favorites/selects";
-import { addFavorite, removeFavorite } from "../../redux/favorites/reducer";
-import { PiStarFill } from "react-icons/pi";
-import { IoEllipse } from "react-icons/io5";
-import { selectUserIsSignIn } from "../../redux/users/selects";
+import { useDispatch, useSelector } from 'react-redux';
+import { selectFavorites } from '../../redux/favorites/selects';
+import { addFavorite, removeFavorite } from '../../redux/favorites/reducer';
+import { PiStarFill } from 'react-icons/pi';
+import { IoEllipse } from 'react-icons/io5';
+import { selectUserIsSignIn } from '../../redux/users/selects';
 
 export const CardMarkupItem = ({ cardData }) => {
   const {
@@ -34,23 +34,23 @@ export const CardMarkupItem = ({ cardData }) => {
   const [defaultAvatarReviews, setDefaultAvatarReviews] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showReviews, setShowReviews] = useState(false);
-  const [iconColorEmpty, setIconColorEmpty] = useState("#333");
-  const [iconColorFilled, setIconColorFilled] = useState("red");
+  const [iconColorEmpty, setIconColorEmpty] = useState('#333');
+  const [iconColorFilled, setIconColorFilled] = useState('red');
 
   useEffect(() => {
-    const generateDefaultAvatar = (name) => {
+    const generateDefaultAvatar = name => {
       if (name && name.length >= 1) {
         const initial = name.charAt(0).toUpperCase();
-        const canvas = document.createElement("canvas");
-        const ctx = canvas.getContext("2d");
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
         canvas.width = 100;
         canvas.height = 100;
-        ctx.fillStyle = "rgba(52, 112, 255, 0.2)";
+        ctx.fillStyle = 'rgba(52, 112, 255, 0.2)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "#3470ff";
-        ctx.font = "500 48px Inter";
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
+        ctx.fillStyle = '#3470ff';
+        ctx.font = '500 48px Inter';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
         ctx.fillText(initial, canvas.width / 2, canvas.height / 2);
         return canvas.toDataURL();
       }
@@ -58,7 +58,7 @@ export const CardMarkupItem = ({ cardData }) => {
     };
 
     const defaultAvatarUrl = generateDefaultAvatar(name);
-    const defaultReviewerAvatars = reviews.map((review) =>
+    const defaultReviewerAvatars = reviews.map(review =>
       generateDefaultAvatar(review.reviewer)
     );
     setDefaultAvatar(defaultAvatarUrl);
@@ -66,15 +66,15 @@ export const CardMarkupItem = ({ cardData }) => {
   }, [name, reviews]);
 
   useEffect(() => {
-    setIsFavorite(favorites.some((favorite) => favorite.id === id));
+    setIsFavorite(favorites.some(favorite => favorite.id === id));
   }, [favorites, id]);
 
   useEffect(() => {
     if (isFavorite) {
-      setIconColorFilled("red");
+      setIconColorFilled('red');
     } else {
-      setIconColorEmpty("#333");
-      setIconColorFilled("red");
+      setIconColorEmpty('#333');
+      setIconColorFilled('red');
     }
   }, [isFavorite]);
 
@@ -88,7 +88,7 @@ export const CardMarkupItem = ({ cardData }) => {
         setIsFavorite(true);
       }
     } else {
-      Notify.failure("To add to favorites, please log in to your account!");
+      Notify.failure('To add to favorites, please log in to your account!');
     }
   };
 
@@ -112,20 +112,20 @@ export const CardMarkupItem = ({ cardData }) => {
             <IoMdHeart
               color={iconColorFilled}
               style={{
-                width: "26px",
-                height: "22px",
-                strokeWidth: "2px",
-                stroke: "#191a15",
+                width: '26px',
+                height: '22px',
+                strokeWidth: '2px',
+                stroke: '#191a15',
               }}
             />
           ) : (
             <IoMdHeartEmpty
               color={iconColorEmpty}
               style={{
-                width: "26px",
-                height: "22px",
-                strokeWidth: "2px",
-                stroke: "#191a15",
+                width: '26px',
+                height: '22px',
+                strokeWidth: '2px',
+                stroke: '#191a15',
               }}
             />
           )
@@ -133,10 +133,10 @@ export const CardMarkupItem = ({ cardData }) => {
           <IoMdHeartEmpty
             color={iconColorEmpty}
             style={{
-              width: "26px",
-              height: "22px",
-              strokeWidth: "2px",
-              stroke: "#191a15",
+              width: '26px',
+              height: '22px',
+              strokeWidth: '2px',
+              stroke: '#191a15',
             }}
           />
         )}
@@ -151,13 +151,13 @@ export const CardMarkupItem = ({ cardData }) => {
           className="avatarUrl"
           src={avatar_url || defaultAvatar}
           alt="avatar"
-          style={{ cursor: "pointer" }}
+          style={{ cursor: 'pointer' }}
         />
         <span className="avatarEllipseOutline">
-          <IoEllipse size="14" style={{ color: "#fff" }} />
+          <IoEllipse size="14" style={{ color: '#fff' }} />
         </span>
         <span className="avatarEllipse">
-          <IoEllipse size="10" style={{ color: "#38cd3e" }} />
+          <IoEllipse size="10" style={{ color: '#38cd3e' }} />
         </span>
       </div>
       <div className="containerInfo">
@@ -165,7 +165,7 @@ export const CardMarkupItem = ({ cardData }) => {
           <li className="itemInfo">Psychologist</li>
           <li className="itemInfo">
             <span className="starIcon">
-              <PiStarFill style={{ color: "#ffc531" }} />
+              <PiStarFill style={{ color: '#ffc531' }} />
             </span>
             Rating:
             {rating}
@@ -189,7 +189,7 @@ export const CardMarkupItem = ({ cardData }) => {
           </li>
           <li className="itemExperience">
             <button className="buttonExperience" type="button">
-              Specialization:{" "}
+              Specialization:{' '}
               <span className="experience">{specialization}</span>
             </button>
           </li>
@@ -200,12 +200,17 @@ export const CardMarkupItem = ({ cardData }) => {
             </button>
           </li>
         </ul>
-        <p className="aboutText" style={{ marginBottom: showReviews ? "40px" : "14px" }}>{about}</p>
+        <p
+          className="aboutText"
+          style={{ marginBottom: showReviews ? '40px' : '14px' }}
+        >
+          {about}
+        </p>
         <button
           type="button"
           className="buttonReadMore"
           onClick={handleButtonReviews}
-          style={{ display: showReviews ? "none" : "block" }}
+          style={{ display: showReviews ? 'none' : 'block' }}
         >
           Read more
         </button>
@@ -218,13 +223,13 @@ export const CardMarkupItem = ({ cardData }) => {
                     className="avatarReviews"
                     src={defaultAvatarReviews[0]}
                     alt="avatar"
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: 'pointer' }}
                   />
                   <div className="containerRating">
                     <p className="textReniewerName">{reviews[0].reviewer}</p>
                     <p className="textReniewerRating">
                       <span className="starIcon">
-                        <PiStarFill style={{ color: "#ffc531" }} />
+                        <PiStarFill style={{ color: '#ffc531' }} />
                       </span>
                       {reviews[0].rating}
                     </p>
@@ -238,13 +243,13 @@ export const CardMarkupItem = ({ cardData }) => {
                     className="avatarReviews"
                     src={defaultAvatarReviews[1]}
                     alt="avatar"
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: 'pointer' }}
                   />
                   <div className="containerRating">
                     <p className="textReniewerName">{reviews[1].reviewer}</p>
                     <p className="textReniewerRating">
                       <span className="starIcon">
-                        <PiStarFill style={{ color: "#ffc531" }} />
+                        <PiStarFill style={{ color: '#ffc531' }} />
                       </span>
                       {reviews[1].rating}
                     </p>

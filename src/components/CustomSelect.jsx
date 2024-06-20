@@ -8,7 +8,7 @@ const CustomSelect = ({
   errors,
   touched,
   setFieldValue,
-  className
+  className,
 }) => {
   return (
     <>
