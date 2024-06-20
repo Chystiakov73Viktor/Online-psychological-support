@@ -45,7 +45,7 @@ export const AppBarComponent = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/online-psychological-support"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -94,7 +94,7 @@ export const AppBarComponent = () => {
             variant="h5"
             noWrap
             component="a"
-            href="/"
+            href="/online-psychological-support"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
