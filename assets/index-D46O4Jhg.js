@@ -1,4 +1,4 @@
-import{p as c,j as n,G as i}from"./index-Uy0fBLzU.js";const e=c.div`
+import{p as c,j as n,G as i}from"./index-BRTDOoS8.js";const e=c.div`
   margin: 0 auto;
   width: 100%;
   padding: 0 38px;
